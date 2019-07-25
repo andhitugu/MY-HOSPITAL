@@ -8,6 +8,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme =>({
   root: {
@@ -37,8 +38,8 @@ export default function LabelBottomNavigation() {
     <AppBar position="fixed" color="primary" className={classes.appBar}>
 
         <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-            <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
-            <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
+            <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} component={Link} to ="/" />
+            <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} component={Link} to="/dataapi"/>
             <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
             <BottomNavigationAction label="Folder" value="folder" icon={<Icon>folder</Icon>} />
         </BottomNavigation>

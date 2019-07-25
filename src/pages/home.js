@@ -3,12 +3,10 @@ import './Home.css'
 // import Background from '../asset/latar.jpg'
 import Biaya from './pagebiaya'
 import Kartu from './pagekartu'
-// import SimpleBottomNavigation from './tombol2.js';
-// import SimpleBottomNavigation from './tombol2.js';
+
 import ImageAvatars from './foto.js';
 
-var bg = require('../asset/latar.jpg')
-
+var bg = require('../asset/LATAR2.jpg')
 class Home extends React.Component{
     render(){
         return(

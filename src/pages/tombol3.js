@@ -2,12 +2,13 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-
+import {Link} from 'react-router-dom'
 const images = [
   {
     url: require('../asset/tombol1.jpg'),
     title: 'Kartu Pasien',
     width: '33.3%',
+    
   },
   {
     url: require('../asset/tombol2.jpg'),
@@ -30,6 +31,7 @@ const images = [
     width: '33.3%',
   },
   {
+    id:8,
     url: require('../asset/tombol2.jpg'),
     title: 'Jadwal kontrol',
     width: '33.3%',
@@ -41,6 +43,11 @@ const images = [
     width: '33.3%',
   },
 
+  {
+    url: require('../asset/tombol2.jpg'),
+    title: 'Booking online',
+    width: '33.3%',
+  },
 
 
 
@@ -51,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
-    minWidth: 300,
+    minWidth: 200,
     width: '100%',
   },
   image: {
@@ -127,6 +134,8 @@ export default function ButtonBases() {
     <div className={classes.root}>
       {images.map(image => (
         <ButtonBase
+          component={Link}
+          to="/dataapi"
           focusRipple
           key={image.title}
           className={classes.image}

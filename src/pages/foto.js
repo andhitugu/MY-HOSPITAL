@@ -5,12 +5,12 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
   avatar: {
-    margin: 10,
+    margin: 15,
   },
   bigAvatar: {
-    margin: 10,
-    width: 60,
-    height: 60,
+    margin: 15,
+    width: 130,
+    height: 130,
   },
 });
 
@@ -21,6 +21,7 @@ export default function ImageAvatars() {
     <Grid container justify="center" alignItems="center">
       <Avatar alt="Remy Sharp" src={require('../asset/fotocantik.jpg')} className={classes.bigAvatar} />
       {/* <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" className={classes.bigAvatar} /> */}
+
     </Grid>
   );
 }
